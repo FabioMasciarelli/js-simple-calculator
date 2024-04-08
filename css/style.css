@@ -11,9 +11,31 @@
     display: none;
 }
 
+.border {
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    border-top: 0;
+    border-left: 0;
+}
+
+.border-invert {
+    border-bottom: 0;
+    border-right: 0;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+}
+
+body {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .container { 
     width: 300px;
-    margin: 100px auto;
+
 }
 
 #logo {
@@ -57,6 +79,12 @@
     flex-grow: 1;
 }
 
+.result {
+    background-color: #ff9f0a;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
 .column {
     justify-content: space-between;
     display: flex;
@@ -72,7 +100,7 @@
 }
 
 .operations {
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 10px;
     background-color: #77a8b0;
 }
