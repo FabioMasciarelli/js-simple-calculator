@@ -65,8 +65,10 @@
     padding: 15px;
 }
 
-#orange {
+.delete {
     background-color: #ff9f0a;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .operations {

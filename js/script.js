@@ -7,16 +7,18 @@ const numbers = document.querySelectorAll(".numbers");
 const display = document.querySelector(".display");
 const zero = document.querySelector(".zero");
 
-let firstNum = "";
+let num = "";
 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", function() {
-        firstNum += numbers[i].innerHTML;
+        num += numbers[i].innerHTML;
         console.log(numbers[i].innerHTML);
         zero.classList.add("hidden");
         display.innerHTML += numbers[i].innerHTML;
+        parseInt(num);
+        console.log(num, typeof num);
     })
-}
+};
 
 // aggiungere event listener a tutti gli operatori
 // quando si clicca su un operatore, salvare l'operatore cliccato e il primo operando, quindi resettare il numero in alto
@@ -29,7 +31,14 @@ for (let i = 0; i < operators.length; i++) {
         console.log(operators[i]);
 
         display.innerHTML = curOperator;
-        ;
     })
-}
+};
+
+// pulsante canc: cliccando il pulsante si resetta il calcolo
+
+const canc = document.querySelector(".delete");
+
+canc.addEventListener("click", function() {
+    window.location.reload();
+});
 
