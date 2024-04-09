@@ -2,45 +2,59 @@
 // quando si clicca su un numero, concatenarlo al numero visualizzato in alto
 
 const buttons = document.querySelectorAll("button");
+console.log(buttons);
 
-for(let i = 0; i < buttons.length; i++) {
+for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function() {
-        buttons.classList.add("border-invert");
+        buttons[i].classList.add("border-invert");
     })
 };
 
 // prendere tutti i numeri e aggiungere eventlistener
 
 const numbers = document.querySelectorAll(".numbers");
-const display = document.querySelector(".display");
+let display = document.querySelector(".display");
 const zero = document.querySelector(".zero");
-
-let num ="";
+const operators = document.querySelectorAll(".operations");
+let curOperator = null;
+let num1 ="";
 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", function() {
-        num += numbers[i].innerHTML;
-        console.log(numbers[i].innerHTML);
-        zero.classList.add("hidden");
-        display.innerHTML += numbers[i].innerHTML;
-        parseInt(num);
-        console.log(num, typeof num);
-    })
+        console.log(this.innerHTML);
+        display.innerHTML += this.innerHTML;
+        display.innerHTML = parseInt(display.innerHTML);
+    });
 };
 
 // aggiungere event listener a tutti gli operatori
-// quando si clicca su un operatore, salvare l'operatore cliccato e il primo operando, quindi resettare il numero in alto
 
-const operators = document.querySelectorAll(".operations");
 
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener("click", function() {
-        curOperator = operators[i].innerHTML;
-        console.log(operators[i]);
-
-        display.innerHTML = curOperator;
+        num1 = parseInt(display.innerHTML);
+        console.log(num1, typeof num1);
+        curOperator = this.innerHTML;
+        console.log(operators[i].innerHTML);
+        display.innerHTML = "0";
     })
 };
+
+
+// aggiungere event listener al pulsante =
+// quando si clicca su =, salvare il secondo operando, 
+// effetuare il calcolo corretto in base all'operatore selezionato e visualizzare il risultato in alto
+
+const equal = document.querySelector(".result")
+
+equal.addEventListener("click", function() {
+    let num2 = parseInt(display.innerHTML);
+    const result = calculator(num1, num2, curOperator);
+    console.log(result);
+    display.innerHTML = result;
+});
+
+
 
 // pulsante canc: cliccando il pulsante si resetta il calcolo
 
@@ -49,4 +63,3 @@ const canc = document.querySelector(".delete");
 canc.addEventListener("click", function() {
     window.location.reload();
 });
-

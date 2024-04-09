@@ -25,6 +25,8 @@
     border-left: 2px solid grey;
 }
 
+/* *********************************** */
+
 body {
     background-color: cadetblue;
     display: flex;
@@ -45,6 +47,7 @@ body {
 }
 
 .display {
+    overflow-x: auto;
     min-height: 70px;
     font-family: 'Seven Segment', sans-serif;
     background-color: black;
@@ -75,7 +78,7 @@ body {
     padding: 15px 0;
 }
 
-.special {
+.grow {
     flex-grow: 1;
 }
 
