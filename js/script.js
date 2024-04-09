@@ -1,15 +1,6 @@
 // aggiungere event listener a tutti i numeri (0-9)
 // quando si clicca su un numero, concatenarlo al numero visualizzato in alto
 
-const buttons = document.querySelectorAll("button");
-console.log(buttons);
-
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", function() {
-        buttons[i].classList.add("border-invert");
-    })
-};
-
 // prendere tutti i numeri e aggiungere eventlistener
 
 const numbers = document.querySelectorAll(".numbers");

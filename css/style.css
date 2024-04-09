@@ -12,8 +12,8 @@
 }
 
 .border {
-    border-bottom: 2px solid grey;
-    border-right: 2px solid grey;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     border-top: 0;
     border-left: 0;
 }
@@ -21,8 +21,8 @@
 .border-invert {
     border-bottom: 0;
     border-right: 0;
-    border-top: 2px solid grey;
-    border-left: 2px solid grey;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
 }
 
 /* *********************************** */
@@ -44,6 +44,12 @@ body {
     background-color: #cfcfcf;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+button:active {
+    background-color: grey;
+    box-shadow: 1px 2px black;
+    transform: translateY(1px);
 }
 
 .display {
