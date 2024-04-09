@@ -6,7 +6,7 @@
 const numbers = document.querySelectorAll(".numbers");
 let display = document.querySelector(".display");
 const zero = document.querySelector(".zero");
-const operators = document.querySelectorAll(".operations");
+let operators = document.querySelectorAll(".operations");
 let curOperator = null;
 let num1 ="";
 
@@ -52,5 +52,9 @@ equal.addEventListener("click", function() {
 const canc = document.querySelector(".delete");
 
 canc.addEventListener("click", function() {
-    window.location.reload();
+    display.innerHTML = 0;
+    operators = "";
+    num1 = "";
+    num2 = "";
+
 });
