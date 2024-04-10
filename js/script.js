@@ -26,8 +26,9 @@ for (let i = 0; i < operators.length; i++) {
         num1 = parseInt(display.innerHTML);
         console.log(num1, typeof num1);
         curOperator = this.innerHTML;
-        console.log(operators[i].innerHTML);
+        console.log(this.innerHTML);
         display.innerHTML = "0";
+        console.log(display.innerHTML);
     })
 };
 
@@ -53,8 +54,7 @@ const canc = document.querySelector(".delete");
 
 canc.addEventListener("click", function() {
     display.innerHTML = 0;
+    num1 = 0;
+    num2 = 0;
     operators = "";
-    num1 = "";
-    num2 = "";
-
 });
