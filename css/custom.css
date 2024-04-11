@@ -9,10 +9,6 @@
     background-color: #9f9f9f;
 }
 
-.operations:active {
-    background-color:
-}
-
 body {
     display: flex;
     justify-content: center;
@@ -33,7 +29,7 @@ body {
 }
 
 .display {
-    font-size: 2rem;
+    font-size: 4rem;
     width: 90%;
     color: white;
     text-align: end;
