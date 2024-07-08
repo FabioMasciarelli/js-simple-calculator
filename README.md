@@ -1,19 +1,11 @@
-<h1 align="left">Simple Calculator</h1>
+Calcolatrice semplice con soli due addendi
 
-###
+[x] prendere tutti i bottoni con i numeri e aggiungere ad ognuno un eventListener per cui i numeri cliccati vengono concatenati e visulizzati nel display della calcolatrice.
 
-<h3 align="left">Overview</h3>
+[x] prendere i bottoni con gli operatori e aggiungere ad ognuno un eventListener per cui quando cliccati viene salvato l'operatore selezionato.
 
-###
+[x] aggiungere eventListener al pulsante "=" in modo che quando venga cliccato visualizzi nel display il risultato dell'operazione.
 
-<p align="left">This is a simple calculator application built using JavaScript, HTML, and CSS. It supports basic arithmetic operations like addition, subtraction, multiplication, and division.</p>
+[x] creare una funzione per cui in base all'operatore selezionato, svolga il calcolo.
 
-###
-
-<h3 align="left">Features</h3>
-
-###
-
-<p align="left">Addition<br>Subtraction<br>Multiplication<br>Division<br>Clear the input</p>
-
-###
+[x] prendere il bottone "C" e aggiungere eventListener per cui quando viene cliccato si pulisce il display e viene resettato il calcolo.
