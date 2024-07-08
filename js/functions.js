@@ -36,3 +36,18 @@ function calculator (num1, num2, operator) {
 
     return result;
 }
+
+/**
+ * function to check the flag 'value'
+ *
+ * @param {boolean} value
+ */
+function toggleModal(value) {
+    if(value === true) {
+        modalRecent.classList.remove('hidden');
+        display.classList.add('hidden');
+    } else {
+        modalRecent.classList.add('hidden');
+        display.classList.remove('hidden');
+    }
+}
