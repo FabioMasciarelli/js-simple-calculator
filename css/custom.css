@@ -5,14 +5,29 @@
     font-size: 1.2rem;
 }
 
-.numbers:active {
-    background-color: #9f9f9f;
-}
-
 body {
     display: flex;
     justify-content: center;
     background-color: #333333;
+}
+
+#recent {
+    padding: 30px;
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.recent-icon {
+    color: white;
+}
+
+.grow:active, .number:active, .result:active {
+    background-color: #9f9f9f
 }
 
 .container {
@@ -29,6 +44,7 @@ body {
 }
 
 .display {
+    font-family: sans-serif;
     font-size: 4rem;
     width: 90%;
     color: white;
@@ -49,7 +65,7 @@ body {
     gap: 15px;
 }
 
-.numbers {
+.number {
     color: white;
     background-color: #313131;
     width: calc(100% / 3 - 15px);

@@ -1,5 +1,5 @@
 /**
- * Description placeholder
+ * Switch-case to calculate the result
  *
  * @param {number} num1
  * @param {number} num2
@@ -9,23 +9,24 @@
 function calculator (num1, num2, operator) {
 
     let result = 0;
+
     switch (operator) {
-        case "+": 
+        case "+": //  operator === "+"
             result = num1 + num2;
             break;
 
-        case "X":
+        case "x": // operator === "*"
             result = num1 * num2;
             break;
         
-        case "/":
+        case "/": // operator === "/"
             result = num1 / num2;
             if (num2 === 0) {
                 result = "error";
             }
             break;
 
-        case "-":
+        case "-": // operator === "-"
             result = num1 - num2;
             break;
 

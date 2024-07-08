@@ -3,12 +3,13 @@
 
 // prendere tutti i numeri e aggiungere eventlistener
 
-const numbers = document.querySelectorAll(".numbers");
+const numbers = document.querySelectorAll(".number");
 let display = document.querySelector(".display");
 const zero = document.querySelector(".zero");
 let operators = document.querySelectorAll(".operations");
 let curOperator = null;
-let num1 ="";
+let num1 = null;
+let num2 = null;
 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", function() {
@@ -40,7 +41,7 @@ for (let i = 0; i < operators.length; i++) {
 const equal = document.querySelector(".result")
 
 equal.addEventListener("click", function() {
-    let num2 = parseInt(display.innerHTML);
+    num2 = parseInt(display.innerHTML);
     const result = calculator(num1, num2, curOperator);
     console.log(result);
     display.innerHTML = result;

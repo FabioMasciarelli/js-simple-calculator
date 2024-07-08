@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- FONT -->
     <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="css/custom.css">
+
     <title>Calculator</title>
 </head>
+
 <body>
     <div class="container">
-        <div id="logo">
-            
-        </div>
+        <button id="recent"><i class="fa-solid fa-bars recent-icon"></i></button>
         <div class="display">0</div>
         <div class="container-flex">
             <div class="container-wrap">
-                <button onclick class="numbers border">7</button> 
-                <button class="numbers border">8</button> 
-                <button class="numbers border">9</button> 
-                <button class="numbers border">4</button> 
-                <button class="numbers border">5</button> 
-                <button class="numbers border">6</button> 
-                <button class="numbers border">1</button> 
-                <button class="numbers border">2</button> 
-                <button class="numbers border">3</button> 
-                <button class="grow border">0</button> 
-                <button class="result border">=</button> 
+                <button onclick class="number border">7</button>
+                <button class="number border">8</button>
+                <button class="number border">9</button>
+                <button class="number border">4</button>
+                <button class="number border">5</button>
+                <button class="number border">6</button>
+                <button class="number border">1</button>
+                <button class="number border">2</button>
+                <button class="number border">3</button>
+                <button class="grow border">0</button>
+                <button class="result border">=</button>
             </div>
             <div class="column">
                 <button class="delete border operations">C</button>
                 <button class="operations border">+</button>
                 <button class="operations border">-</button>
-                <button class="operations border">X</button>
+                <button class="operations border">x</button>
                 <button class="operations border">/</button>
             </div>
         </div>
@@ -37,4 +46,5 @@
     <script src="./js/functions.js"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
