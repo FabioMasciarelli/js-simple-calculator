@@ -11,6 +11,10 @@ body {
     background-color: #333333;
 }
 
+button {
+    cursor: pointer;
+}
+
 #recent {
     padding: 30px;
     background-color: transparent;
