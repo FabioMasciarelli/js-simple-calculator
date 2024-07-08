@@ -3,6 +3,7 @@
 
 const modalRecentBtn = document.getElementById('toggle-modal');
 const modalRecent = document.querySelector('.recents-modal');
+const listResults = document.querySelector('list-results')
 let openModal = false;
 
 const numbers = document.querySelectorAll(".number");
@@ -19,7 +20,7 @@ modalRecentBtn.addEventListener('click', function() {
     if (openModal === true) {
         openModal = false;
         toggleModal(openModal);
-    } else if (openModal === false) {
+    } else {
         openModal = true;
         toggleModal(openModal);
     }
@@ -57,14 +58,15 @@ const equal = document.querySelector(".result")
 equal.addEventListener("click", function() {
     num2 = parseInt(display.innerHTML);
     const result = calculator(num1, num2, curOperator);
-    console.log(result);
     display.innerHTML = result;
+    console.log(result);
+    const resultToJSON = JSON.stringify(result);
+    localStorage.setItem('results', resultToJSON);
 });
 
 
 
 // pulsante canc: cliccando il pulsante si resetta il calcolo
-
 const canc = document.querySelector(".delete");
 
 canc.addEventListener("click", function() {

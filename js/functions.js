@@ -38,15 +38,19 @@ function calculator (num1, num2, operator) {
 }
 
 /**
- * function to check the flag 'value'
+ * function to show the modal with recents results
  *
- * @param {boolean} value
+ * @param {boolean} modal
  */
-function toggleModal(value) {
-    if(value === true) {
+function toggleModal(modal) {
+    if(modal === true) {
         modalRecent.classList.remove('hidden');
         display.classList.add('hidden');
-    } else {
+        const results = localStorage.getItem('results');
+        const JSONToResult = JSON.parse(results);
+        const listElem = `<li>${JSONToResult}</li>`;
+        listResults.innerHTML = listElem;
+        } else {
         modalRecent.classList.add('hidden');
         display.classList.remove('hidden');
     }
