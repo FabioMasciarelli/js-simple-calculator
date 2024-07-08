@@ -1,8 +1,9 @@
 // aggiungere event listener a tutti i numeri (0-9)
 // quando si clicca su un numero, concatenarlo al numero visualizzato in alto
 
-// prendere tutti i numeri e aggiungere eventlistener
-
+const openModalRecentBtn = document.getElementById('open-modal');
+const modalRecent = document.querySelector('.recent-modal');
+const closeModalRecentBtn = document.querySelector('#close-modal');
 const numbers = document.querySelectorAll(".number");
 let display = document.querySelector(".display");
 const zero = document.querySelector(".zero");
@@ -11,17 +12,29 @@ let curOperator = null;
 let num1 = null;
 let num2 = null;
 
+openModalRecentBtn.addEventListener('click',  function() {
+    modalRecent.classList.remove('hidden');
+    openModalRecentBtn.classList.add('hidden');
+    display.classList.add('hidden');
+});
+
+closeModalRecentBtn.addEventListener('click', function() {
+    modalRecent.classList.add('hidden');
+    openModalRecentBtn.classList.remove('hidden');
+    display.classList.remove('hidden');
+});
+
+
+// prendere tutti i numeri e aggiungere eventlistener
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", function() {
         console.log(this.innerHTML);
         display.innerHTML += this.innerHTML;
         display.innerHTML = parseInt(display.innerHTML);
-    });
+    })
 };
 
 // aggiungere event listener a tutti gli operatori
-
-
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener("click", function() {
         num1 = parseInt(display.innerHTML);
