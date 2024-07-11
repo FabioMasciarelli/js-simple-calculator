@@ -3,7 +3,7 @@
 
 const modalRecentBtn = document.getElementById('toggle-modal');
 const modalRecent = document.querySelector('.recents-modal');
-const listResults = document.querySelector('list-results')
+const listResults = document.querySelector('.list-results');
 let openModal = false;
 
 const numbers = document.querySelectorAll(".number");
@@ -59,9 +59,12 @@ equal.addEventListener("click", function() {
     num2 = parseInt(display.innerHTML);
     const result = calculator(num1, num2, curOperator);
     display.innerHTML = result;
-    console.log(result);
-    const resultToJSON = JSON.stringify(result);
-    localStorage.setItem('results', resultToJSON);
+
+    const lastCalc = `${num1} ${curOperator} ${num2} = ${result}`;
+
+    lastCalcToJSON = JSON.stringify(lastCalc);
+
+    localStorage.setItem('calc', lastCalcToJSON);
 });
 
 

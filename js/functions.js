@@ -46,10 +46,10 @@ function toggleModal(modal) {
     if(modal === true) {
         modalRecent.classList.remove('hidden');
         display.classList.add('hidden');
-        const results = localStorage.getItem('results');
-        const JSONToResult = JSON.parse(results);
-        const listElem = `<li>${JSONToResult}</li>`;
-        listResults.innerHTML = listElem;
+        const lastCalc = localStorage.getItem('calc');
+        const JSONToResult = JSON.parse(lastCalc);
+        console.log(JSONToResult);
+        listResults.innerHTML += `<li>${JSONToResult}</li>`;
         } else {
         modalRecent.classList.add('hidden');
         display.classList.remove('hidden');
