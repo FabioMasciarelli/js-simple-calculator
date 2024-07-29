@@ -6,7 +6,7 @@
  * @param {string} operator
  * @returns {number}
  */
-function calculator (num1, num2, operator) {
+function calculator(num1, num2, operator) {
 
     let result = 0;
 
@@ -18,7 +18,7 @@ function calculator (num1, num2, operator) {
         case "x": // operator === "*"
             result = num1 * num2;
             break;
-        
+
         case "/": // operator === "/"
             result = num1 / num2;
             if (num2 === 0) {
@@ -43,14 +43,10 @@ function calculator (num1, num2, operator) {
  * @param {boolean} modal
  */
 function toggleModal(modal) {
-    if(modal === true) {
+    if (modal === true) {
         modalRecent.classList.remove('hidden');
         display.classList.add('hidden');
-        const lastCalc = localStorage.getItem('calc');
-        const JSONToResult = JSON.parse(lastCalc);
-        console.log(JSONToResult);
-        listResults.innerHTML += `<li>${JSONToResult}</li>`;
-        } else {
+    } else {
         modalRecent.classList.add('hidden');
         display.classList.remove('hidden');
     }
